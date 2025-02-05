@@ -1,5 +1,3 @@
-[![CI Pipeline](https://github.com/nikolaevaElizaveta/S25-core-course-labs/actions/workflows/ci.yml/badge.svg)](https://github.com/nikolaevaElizaveta/S25-core-course-labs/actions/workflows/ci.yml)
-
 # Python Web Application
 
 ## Overview
@@ -53,3 +51,5 @@ This is a simple Python web application that displays the current time in Moscow
     ```bash
     docker run -p 5000:5000 my-flask-app
     ```
+
+[![CI Pipeline](https://github.com/nikolaevaElizaveta/S25-core-course-labs/actions/workflows/ci.yml/badge.svg)](https://github.com/nikolaevaElizaveta/S25-core-course-labs/actions/workflows/ci.yml)
