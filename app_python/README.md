@@ -1,3 +1,5 @@
+[![CI Pipeline](https://github.com/nikolaevaElizaveta/S25-core-course-labs/actions/workflows/ci.yml/badge.svg)](https://github.com/nikolaevaElizaveta/S25-core-course-labs/actions/workflows/ci.yml)
+
 # Python Web Application
 
 ## Overview
