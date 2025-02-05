@@ -71,7 +71,7 @@ def show_time():
                 .flower .petal3 {{
                     top: 0;
                     left: 10px;
-                }}                
+                }}
             </style>
         </head>
         <body>
@@ -112,7 +112,7 @@ def show_time():
     </html>
     """
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
 
     app.run(host="0.0.0.0", port=5000)
