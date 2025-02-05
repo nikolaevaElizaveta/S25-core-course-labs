@@ -4,6 +4,7 @@ import pytz
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def show_time():
     # Setting Moscow timezone
@@ -70,9 +71,7 @@ def show_time():
                 .flower .petal3 {{
                     top: 0;
                     left: 10px;
-                }}
-
-                
+                }}                
             </style>
         </head>
         <body>
@@ -114,6 +113,6 @@ def show_time():
     """
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    app.run(host="0.0.0.0", port=5000)
 
+
+    app.run(host="0.0.0.0", port=5000)
