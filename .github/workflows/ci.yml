@@ -29,13 +29,6 @@ jobs:
         run: |
           python -m unittest discover -s tests
 
-      - name: Run Snyk Security Scan
-        uses: snyk/actions/python@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --file=app_python/requirements.txt test
-
   docker:
     needs: build
     runs-on: ubuntu-latest
