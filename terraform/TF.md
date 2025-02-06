@@ -1,6 +1,6 @@
 # Terraform Lab Documentation
 
-### terraform apply
+## terraform apply
 
 Plan: 2 to add, 0 to change, 0 to destroy.       
 
@@ -14,13 +14,13 @@ docker_container.nginx: Creation complete after 4s [id=08b0fe62afbf914b70fc225de
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 
-### terraform state list
+## terraform state list
 
 docker_container.nginx
 docker_image.nginx
 
 
-### terraform state show docker_container.nginx
+## terraform state show docker_container.nginx
 
 # docker_container.nginx:
 resource "docker_container" "nginx" {
@@ -101,7 +101,7 @@ resource "docker_container" "nginx" {
 }
 
 
-### terraform state show docker_image.nginx    
+## terraform state show docker_image.nginx    
 
 # docker_image.nginx:
 resource "docker_image" "nginx" {
@@ -113,9 +113,9 @@ resource "docker_image" "nginx" {
 }
 
 
-## after changes 
+# after changes 
 
-### terraform apply
+## terraform apply
 
 docker_image.nginx: Refreshing state... [id=sha256:91734281c0ebfc6f1aea979cffeed5079cfe786228a71cc6f1f46a228cde6e34nginx]
 docker_container.nginx: Refreshing state... [id=08b0fe62afbf914b70fc225de487be660eb28a06412560c37be5511294544036]
@@ -130,7 +130,7 @@ docker_container.nginx: Creation complete after 2s [id=be509c8f045e47fd0d7f72ecd
 Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
 
 
-### terraform destroy
+## terraform destroy
 
 docker_image.nginx: Refreshing state... [id=sha256:91734281c0ebfc6f1aea979cffeed5079cfe786228a71cc6f1f46a228cde6e34nginx]
 docker_container.nginx: Refreshing state... [id=be509c8f045e47fd0d7f72ecd47191bbf2b0cc62826b3a47056468d33106042a]
@@ -145,7 +145,7 @@ docker_image.nginx: Destruction complete after 1s
 Destroy complete! Resources: 2 destroyed.
 
 
-### terraform apply                 
+## terraform apply                 
        
 Plan: 2 to add, 0 to change, 0 to destroy.     
 
@@ -158,7 +158,7 @@ docker_container.nginx: Creation complete after 4s [id=fb6b896e9bae07eddb1b973c9
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 
-### terraform apply -var "container_name=YetAnotherName"
+## terraform apply -var "container_name=YetAnotherName"
 
 docker_image.nginx: Refreshing state... [id=sha256:91734281c0ebfc6f1aea979cffeed5079cfe786228a71cc6f1f46a228cde6e34nginx]
 docker_container.nginx: Refreshing state... [id=fb6b896e9bae07eddb1b973c9d144aa12220c8d9694475b3ab20c5438d2168dd]
@@ -173,7 +173,7 @@ docker_container.nginx: Creation complete after 2s [id=506e5a0e63d32a6d8761971fa
 Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
 
 
-### terraform apply 
+## terraform apply 
 
 docker_image.nginx: Refreshing state... [id=sha256:91734281c0ebfc6f1aea979cffeed5079cfe786228a71cc6f1f46a228cde6e34nginx]
 docker_container.nginx: Refreshing state... [id=506e5a0e63d32a6d8761971fa4879c923276f3199c378a9bf4e75458941c9f00]    
@@ -188,7 +188,7 @@ docker_container.nginx: Creation complete after 2s [id=dbe28f5310cad7e2d773c1b52
 Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
 
 
-### terraform apply
+## terraform apply
 
 docker_image.nginx: Refreshing state... [id=sha256:91734281c0ebfc6f1aea979cffeed5079cfe786228a71cc6f1f46a228cde6e34nginx]
 docker_container.nginx: Refreshing state... [id=dbe28f5310cad7e2d773c1b5285d864adafd5ce00a5eac694d2b0ba00907185e]    
@@ -212,13 +212,13 @@ container_id = "c950f5befbaaa5dbb0eef7d6751dddd4eca9578cfc23a5437acc09d031d6b801
 image_id = "sha256:91734281c0ebfc6f1aea979cffeed5079cfe786228a71cc6f1f46a228cde6e34nginx"
 
 
-### terraform output
+## terraform output
 
 container_id = "c950f5befbaaa5dbb0eef7d6751dddd4eca9578cfc23a5437acc09d031d6b801"
 image_id = "sha256:91734281c0ebfc6f1aea979cffeed5079cfe786228a71cc6f1f46a228cde6e34nginx"
 
 
-### terraform destroy
+## terraform destroy
 
 docker_image.nginx: Refreshing state... [id=sha256:91734281c0ebfc6f1aea979cffeed5079cfe786228a71cc6f1f46a228cde6e34nginx]
 docker_container.nginx: Refreshing state... [id=c950f5befbaaa5dbb0eef7d6751dddd4eca9578cfc23a5437acc09d031d6b801]    
