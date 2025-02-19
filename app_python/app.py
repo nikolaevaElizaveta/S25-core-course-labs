@@ -1,12 +1,13 @@
-from flask import Flask
+from flask import Flask, Response
 from datetime import datetime
 import pytz
+from prometheus_client import start_http_server, Summary, generate_latest, CONTENT_TYPE_LATEST
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def show_time():
+def index():
     # Setting Moscow timezone
     moscow_tz = pytz.timezone('Europe/Moscow')
     current_time = datetime.now(moscow_tz).strftime('%Y-%m-%d %H:%M:%S')
@@ -111,6 +112,10 @@ def show_time():
         </body>
     </html>
     """
+
+@app.route('/metrics')
+def metrics():
+    return generate_latest(), 200, {'Content-Type': CONTENT_TYPE_LATEST}
 
 
 if __name__ == '__main__':
