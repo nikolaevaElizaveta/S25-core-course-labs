@@ -1,7 +1,7 @@
-from flask import Flask, Response
+from flask import Flask
 from datetime import datetime
 import pytz
-from prometheus_client import start_http_server, Summary, generate_latest, CONTENT_TYPE_LATEST
+from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
 
 app = Flask(__name__)
 
@@ -119,5 +119,4 @@ def metrics():
 
 
 if __name__ == '__main__':
-
     app.run(host="0.0.0.0", port=5000)
